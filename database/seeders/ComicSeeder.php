@@ -15,10 +15,12 @@ class ComicSeeder extends Seeder
     public function run(Faker $faker): void
     {
         $new_comic = new Comic();
+        $new_comic->price = '99';
+        $new_comic->title = 'batman';
 
-        $new_comic->title = $faker->realText(50);
-        $new_comic->price = $faker->randomFloat(2, 0, 9999);
-        $new_comic->description = $faker->realText(300);
+
+        $new_comic->description = 'molto bello';
+
 
         $new_comic->save();
     }
