@@ -14,7 +14,6 @@ class ComicSeeder extends Seeder
      */
     public function run(Faker $faker): void
     {
-
         $new_comic = new Comic();
 
         $new_comic->title = $faker->realText(50);
